@@ -18,4 +18,4 @@ Let's combine all three of states with a Reducer Hook instead. Now every state t
 
 It's a common problem in React that component state is set even though the component got already unmounted(e.g. due to navigating away with React Router).
 
-Every Effect Hook comes with a clean up function which runs when a component unmounts. The cleanup function is the one function returned from the hook. In our case, we use a boolean flag called _didCancel_ to let our data fetching logic know about state(mounted/unmounted) of the component. If the component did unmount, the flag should be set to true which results in preventing to set the component state after the data fetching has been asyncly resolved.
+Every Effect Hook comes with a cleanup function which runs when a component unmounts. The cleanup function is the one function returned from the hook. In our case, we use a boolean flag called _didCancel_ to let our data fetching logic know about state(mounted/unmounted) of the component. If the component did unmount, the flag should be set to true which results in preventing to set the component state after the data fetching has been asyncly resolved.
